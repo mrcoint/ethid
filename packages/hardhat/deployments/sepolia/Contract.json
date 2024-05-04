@@ -1,0 +1,462 @@
+{
+  "address": "0x3dEAF47527b95845e7c6eaCFd869Fd3c70d7735A",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IWorldID",
+          "name": "_worldId",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_appId",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_actionId",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "nullifierHash",
+          "type": "uint256"
+        }
+      ],
+      "name": "DuplicateNullifier",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "PaymentReceived",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "nullifierHash",
+          "type": "uint256"
+        }
+      ],
+      "name": "Verified",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "addToPool",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recepient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "allocateFund",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "changeOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "signal",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "root",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "nullifierHash",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[8]",
+          "name": "proof",
+          "type": "uint256[8]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "execute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPoolBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getUserBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "poolAvailableBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "sendFund",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userBalances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastWithdraw",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawFund",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0xe19fb64470f81d2c7c5db3f926433cbc920a3973e17d782be552bc3b40c92090",
+  "receipt": {
+    "to": null,
+    "from": "0x56CdCFbB8ebd0E178241A5A6D37bd3fDA2438b5b",
+    "contractAddress": "0x3dEAF47527b95845e7c6eaCFd869Fd3c70d7735A",
+    "transactionIndex": 108,
+    "gasUsed": "705421",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x85dea06ff80ac2d20bf0274f2b14b6094e8f564f6485a838d4a080e5a4a1638f",
+    "transactionHash": "0xe19fb64470f81d2c7c5db3f926433cbc920a3973e17d782be552bc3b40c92090",
+    "logs": [],
+    "blockNumber": 5833952,
+    "cumulativeGasUsed": "14307317",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x469449f251692e0779667583026b5a1e99512157",
+    "app_staging_1111f533fbb23185808467efc75c7bf7",
+    "claim-token"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "1dd3e06697b57f1dc5c1dacedc013074",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IWorldID\",\"name\":\"_worldId\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_appId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_actionId\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"nullifierHash\",\"type\":\"uint256\"}],\"name\":\"DuplicateNullifier\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"PaymentReceived\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nullifierHash\",\"type\":\"uint256\"}],\"name\":\"Verified\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"addToPool\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recepient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"allocateFund\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"changeOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"signal\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"root\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nullifierHash\",\"type\":\"uint256\"},{\"internalType\":\"uint256[8]\",\"name\":\"proof\",\"type\":\"uint256[8]\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"execute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPoolBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getUserBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"poolAvailableBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"sendFund\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userBalances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lastWithdraw\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawFund\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"events\":{\"Verified(uint256)\":{\"details\":\"A placeholder event that is emitted when a user successfully verifies with World ID\",\"params\":{\"nullifierHash\":\"The nullifier hash for the verified proof\"}}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"params\":{\"_actionId\":\"The World ID action ID\",\"_appId\":\"The World ID app ID\",\"_worldId\":\"The WorldID router that will verify the proofs\"}},\"execute(address,uint256,uint256,uint256[8],uint256)\":{\"details\":\"Feel free to rename this method however you want! We've used `claim`, `verify` or `execute` in the past.\",\"params\":{\"nullifierHash\":\"The nullifier hash for this proof, preventing double signaling (returned by the JS widget).\",\"proof\":\"The zero-knowledge proof that demonstrates the claimer is registered with World ID (returned by the JS widget).\",\"root\":\"The root of the Merkle tree (returned by the JS widget).\",\"signal\":\"An arbitrary input from the user, usually the user's wallet address (check README for further details)\"}}},\"stateVariables\":{\"externalNullifier\":{\"details\":\"The contract's external nullifier hash\"},\"groupId\":{\"details\":\"The World ID group ID (always 1)\"},\"nullifierHashes\":{\"details\":\"Whether a nullifier hash has been used already. Used to guarantee an action is only performed once by a single person\"},\"worldId\":{\"details\":\"The World ID instance that will be used for verifying proofs\"}},\"version\":1},\"userdoc\":{\"errors\":{\"DuplicateNullifier(uint256)\":[{\"notice\":\"Thrown when attempting to reuse a nullifier\"}]},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Contract.sol\":\"Contract\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/Contract.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.10;\\n\\n// import { ByteHasher } from './helpers/ByteHasher.sol';\\n// import { IWorldID } from './interfaces/IWorldID.sol';\\n\\n\\nstruct User {\\n\\tuint256 balance;\\n\\tuint256 lastWithdraw;\\n}\\n\\nlibrary ByteHasher {\\n\\t/// @dev Creates a keccak256 hash of a bytestring.\\n\\t/// @param value The bytestring to hash\\n\\t/// @return The hash of the specified value\\n\\t/// @dev `>> 8` makes sure that the result is included in our field\\n\\tfunction hashToField(bytes memory value) internal pure returns (uint256) {\\n\\t\\treturn uint256(keccak256(abi.encodePacked(value))) >> 8;\\n\\t}\\n}\\n\\ninterface IWorldID {\\n\\t/// @notice Reverts if the zero-knowledge proof is invalid.\\n\\t/// @param root The of the Merkle tree\\n\\t/// @param groupId The id of the Semaphore group\\n\\t/// @param signalHash A keccak256 hash of the Semaphore signal\\n\\t/// @param nullifierHash The nullifier hash\\n\\t/// @param externalNullifierHash A keccak256 hash of the external nullifier\\n\\t/// @param proof The zero-knowledge proof\\n\\t/// @dev  Note that a double-signaling check is not included here, and should be carried by the caller.\\n\\tfunction verifyProof(\\n\\t\\tuint256 root,\\n\\t\\tuint256 groupId,\\n\\t\\tuint256 signalHash,\\n\\t\\tuint256 nullifierHash,\\n\\t\\tuint256 externalNullifierHash,\\n\\t\\tuint256[8] calldata proof\\n\\t) external view;\\n}\\n\\n\\ncontract Contract {\\n\\tusing ByteHasher for bytes;\\n\\taddress public owner;\\n\\tmapping(address => User) public userBalances;\\n\\tuint256 public poolAvailableBalance;\\n\\taddress public admin;\\n\\t///////////////////////////////////////////////////////////////////////////////\\n\\t///                                  ERRORS                                ///\\n\\t//////////////////////////////////////////////////////////////////////////////\\n\\n\\t/// @notice Thrown when attempting to reuse a nullifier\\n\\terror DuplicateNullifier(uint256 nullifierHash);\\n\\n\\t/// @dev The World ID instance that will be used for verifying proofs\\n\\tIWorldID internal immutable worldId;\\n\\n\\t/// @dev The contract's external nullifier hash\\n\\tuint256 internal immutable externalNullifier;\\n\\n\\t/// @dev The World ID group ID (always 1)\\n\\tuint256 internal immutable groupId = 1;\\n\\n\\t/// @dev Whether a nullifier hash has been used already. Used to guarantee an action is only performed once by a single person\\n\\tmapping(uint256 => bool) internal nullifierHashes;\\n\\n\\t/// @param nullifierHash The nullifier hash for the verified proof\\n\\t/// @dev A placeholder event that is emitted when a user successfully verifies with World ID\\n\\tevent Verified(uint256 nullifierHash);\\n\\n\\tevent PaymentReceived(uint256 amount);\\n\\n\\t/// @param _worldId The WorldID router that will verify the proofs\\n\\t/// @param _appId The World ID app ID\\n\\t/// @param _actionId The World ID action ID\\n\\tconstructor(IWorldID _worldId, string memory _appId, string memory _actionId) {\\n\\t\\tworldId = _worldId;\\n\\t\\texternalNullifier = abi.encodePacked(abi.encodePacked(_appId).hashToField(), _actionId).hashToField();\\n\\t\\towner = msg.sender;\\n\\t\\tadmin = 0x8DF552AaAbd835CF20cB4a5DA6086fE67d7C6Fea;\\n\\t\\tpoolAvailableBalance = 0;\\n\\t}\\n\\n\\t/// @param signal An arbitrary input from the user, usually the user's wallet address (check README for further details)\\n\\t/// @param root The root of the Merkle tree (returned by the JS widget).\\n\\t/// @param nullifierHash The nullifier hash for this proof, preventing double signaling (returned by the JS widget).\\n\\t/// @param proof The zero-knowledge proof that demonstrates the claimer is registered with World ID (returned by the JS widget).\\n\\t/// @dev Feel free to rename this method however you want! We've used `claim`, `verify` or `execute` in the past.\\n\\tfunction execute(address signal, uint256 root, uint256 nullifierHash, uint256[8] calldata proof, uint _amount) public {\\n\\t\\t// First, we make sure this person hasn't done this before\\n\\t\\tif (nullifierHashes[nullifierHash]) revert DuplicateNullifier(nullifierHash);\\n\\n\\t\\t// We now verify the provided proof is valid and the user is verified by World ID\\n\\t\\tworldId.verifyProof(\\n\\t\\t\\troot,\\n\\t\\t\\tgroupId,\\n\\t\\t\\tabi.encodePacked(signal).hashToField(),\\n\\t\\t\\tnullifierHash,\\n\\t\\t\\texternalNullifier,\\n\\t\\t\\tproof\\n\\t\\t);\\n\\n\\t\\t// We now record the user has done this, so they can't do it again (proof of uniqueness)\\n\\t\\tnullifierHashes[nullifierHash] = true;\\n\\n\\t\\t// Finally, execute your logic here, for example issue a token, NFT, etc...\\n\\t\\t// Make sure to emit some kind of event afterwards!\\n\\n\\t\\twithdrawFund(payable(signal), _amount);\\n\\n\\t\\temit Verified(nullifierHash);\\n\\t}\\n\\n\\tfunction withdrawFund(address payable recipient, uint256 amount) public {\\n\\t\\trequire(msg.sender == recipient, 'Only the recipient can withdraw the funds');\\n\\t\\trequire(userBalances[recipient].balance >= amount, 'Insufficient balance');\\n\\t\\t// require(block.timestamp - userBalances[recipient].lastWithdraw >= 1 days, 'Can only withdraw once a day');\\n\\t\\tuserBalances[recipient].balance -= amount;\\n\\t\\tuserBalances[recipient].lastWithdraw = block.timestamp;\\n\\t\\trecipient.transfer(amount);\\n\\t}\\n\\n\\tfunction allocateFund(address recepient, uint256 amount) public {\\n\\t\\trequire(msg.sender == owner || msg.sender == admin, 'Only admin can allocate funds');\\n\\t\\trequire(this.getPoolBalance() >= amount, 'Insufficient pool balance');\\n\\t\\tuserBalances[recepient].balance += amount;\\n\\t\\tpoolAvailableBalance -= amount;\\n\\t}\\n\\n\\t\\n\\n\\tfunction sendFund(address payable recipient, uint256 amount) public {\\n\\t\\trequire(msg.sender == owner, 'Only admin can send the funds');\\n\\t\\trequire(userBalances[recipient].balance >= amount, 'Insufficient recepient balance');\\n\\t\\tuserBalances[recipient].balance -= amount;\\n\\t\\tuserBalances[recipient].lastWithdraw = block.timestamp;\\n\\t\\trecipient.transfer(amount);\\n\\t}\\n\\n\\tfunction changeOwner(address newOwner) public {\\n\\t\\trequire(msg.sender == owner, 'Only admin can change the owner');\\n\\t\\towner = newOwner;\\n\\t}\\n\\n\\tfunction getOwner() public view returns (address) {\\n\\t\\treturn owner;\\n\\t}\\n\\n\\tfunction getPoolBalance() public view returns (uint256) {\\n\\t\\treturn address(this).balance;\\n\\t}\\n\\n\\tfunction getUserBalance(address user) public view returns (uint256) {\\n\\t\\treturn userBalances[user].balance;\\n\\t}\\n\\n\\n\\tfunction addToPool() public payable {\\n\\t\\tpoolAvailableBalance += msg.value;\\n\\t\\temit PaymentReceived(msg.value);\\n\\t}\\n\\n\\treceive() external payable {\\n\\t\\tpoolAvailableBalance += msg.value;\\n\\t\\temit PaymentReceived(msg.value);\\n\\t}\\n\\n}\",\"keccak256\":\"0x95d19b7ba68080ab64d954795e46cde9507a85b10a46ffb73b07e2339a40c23c\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60e0604052600160c0523480156200001657600080fd5b5060405162000d9038038062000d908339810160408190526200003991620001dd565b6001600160a01b038316608052604051620000979062000083906200006390859060200162000267565b604051602081830303815290604052620000d960201b620008c61760201c565b826040516020016200006392919062000285565b60a0525050600080546001600160a01b03199081163317825560038054909116738df552aaabd835cf20cb4a5da6086fe67d7c6fea17905560025550620002ad565b6000600882604051602001620000f0919062000267565b60408051601f198184030181529190528051602090910120901c92915050565b634e487b7160e01b600052604160045260246000fd5b60005b838110156200014357818101518382015260200162000129565b50506000910152565b600082601f8301126200015e57600080fd5b81516001600160401b03808211156200017b576200017b62000110565b604051601f8301601f19908116603f01168101908282118183101715620001a657620001a662000110565b81604052838152866020858801011115620001c057600080fd5b620001d384602083016020890162000126565b9695505050505050565b600080600060608486031215620001f357600080fd5b83516001600160a01b03811681146200020b57600080fd5b60208501519093506001600160401b03808211156200022957600080fd5b62000237878388016200014c565b935060408601519150808211156200024e57600080fd5b506200025d868287016200014c565b9150509250925092565b600082516200027b81846020870162000126565b9190910192915050565b828152600082516200029f81602085016020870162000126565b919091016020019392505050565b60805160a05160c051610ab3620002dd60003960006106cd0152600061072f0152600061069d0152610ab36000f3fe6080604052600436106100c65760003560e01c8063a6f9dae11161007f578063c07401f011610059578063c07401f01461028b578063d224237314610293578063f7c8d221146102b3578063f851a440146102d357600080fd5b8063a6f9dae114610238578063abd70aa214610258578063b211b9cf1461026b57600080fd5b806326224c641461011c578063477348921461016a5780634b569450146101ae5780637e567b96146101d0578063893d20e8146101e65780638da5cb5b1461021857600080fd5b366101175734600260008282546100dd9190610911565b90915550506040513481527f1a07f76ee25d689f09f51951e5b4594bb2e440b7935111a41ba06afeb50ff0149060200160405180910390a1005b600080fd5b34801561012857600080fd5b50610150610137366004610942565b6001602081905260009182526040909120805491015482565b604080519283526020830191909152015b60405180910390f35b34801561017657600080fd5b506101a0610185366004610942565b6001600160a01b031660009081526001602052604090205490565b604051908152602001610161565b3480156101ba57600080fd5b506101ce6101c9366004610966565b6102f3565b005b3480156101dc57600080fd5b506101a060025481565b3480156101f257600080fd5b506000546001600160a01b03165b6040516001600160a01b039091168152602001610161565b34801561022457600080fd5b50600054610200906001600160a01b031681565b34801561024457600080fd5b506101ce610253366004610942565b610436565b34801561026457600080fd5b50476101a0565b34801561027757600080fd5b506101ce610286366004610966565b6104b2565b6101ce61061c565b34801561029f57600080fd5b506101ce6102ae366004610992565b610668565b3480156102bf57600080fd5b506101ce6102ce366004610966565b6107fd565b3480156102df57600080fd5b50600354610200906001600160a01b031681565b6000546001600160a01b031633146103525760405162461bcd60e51b815260206004820152601d60248201527f4f6e6c792061646d696e2063616e2073656e64207468652066756e647300000060448201526064015b60405180910390fd5b6001600160a01b0382166000908152600160205260409020548111156103ba5760405162461bcd60e51b815260206004820152601e60248201527f496e73756666696369656e7420726563657069656e742062616c616e636500006044820152606401610349565b6001600160a01b038216600090815260016020526040812080548392906103e29084906109ea565b90915550506001600160a01b0382166000818152600160208190526040808320429201919091555183156108fc0291849190818181858888f19350505050158015610431573d6000803e3d6000fd5b505050565b6000546001600160a01b031633146104905760405162461bcd60e51b815260206004820152601f60248201527f4f6e6c792061646d696e2063616e206368616e676520746865206f776e6572006044820152606401610349565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b03163314806104d557506003546001600160a01b031633145b6105215760405162461bcd60e51b815260206004820152601d60248201527f4f6e6c792061646d696e2063616e20616c6c6f636174652066756e64730000006044820152606401610349565b80306001600160a01b031663abd70aa26040518163ffffffff1660e01b8152600401602060405180830381865afa158015610560573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061058491906109fd565b10156105d25760405162461bcd60e51b815260206004820152601960248201527f496e73756666696369656e7420706f6f6c2062616c616e6365000000000000006044820152606401610349565b6001600160a01b038216600090815260016020526040812080548392906105fa908490610911565b92505081905550806002600082825461061391906109ea565b90915550505050565b346002600082825461062e9190610911565b90915550506040513481527f1a07f76ee25d689f09f51951e5b4594bb2e440b7935111a41ba06afeb50ff0149060200160405180910390a1565b60008381526004602052604090205460ff161561069b57604051633c7fd51360e11b815260048101849052602401610349565b7f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316633bc778e3857f000000000000000000000000000000000000000000000000000000000000000061072c89604051602001610718919060609190911b6bffffffffffffffffffffffff1916815260140190565b6040516020818303038152906040526108c6565b877f0000000000000000000000000000000000000000000000000000000000000000886040518763ffffffff1660e01b815260040161077096959493929190610a16565b60006040518083038186803b15801561078857600080fd5b505afa15801561079c573d6000803e3d6000fd5b5050506000848152600460205260409020805460ff19166001179055506107c385826107fd565b6040518381527ff786e7f77ede00a02a5464f8f0555798f42ba99a4a920ef2778db8d75e4656f79060200160405180910390a15050505050565b336001600160a01b038316146108675760405162461bcd60e51b815260206004820152602960248201527f4f6e6c792074686520726563697069656e742063616e207769746864726177206044820152687468652066756e647360b81b6064820152608401610349565b6001600160a01b0382166000908152600160205260409020548111156103ba5760405162461bcd60e51b8152602060048201526014602482015273496e73756666696369656e742062616c616e636560601b6044820152606401610349565b60006008826040516020016108db9190610a4e565b60408051601f198184030181529190528051602090910120901c92915050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610924576109246108fb565b92915050565b6001600160a01b038116811461093f57600080fd5b50565b60006020828403121561095457600080fd5b813561095f8161092a565b9392505050565b6000806040838503121561097957600080fd5b82356109848161092a565b946020939093013593505050565b600080600080600061018086880312156109ab57600080fd5b85356109b68161092a565b945060208601359350604086013592506101608601878111156109d857600080fd5b94979396509194606001933592915050565b81810381811115610924576109246108fb565b600060208284031215610a0f57600080fd5b5051919050565b60006101a0820190508782528660208301528560408301528460608301528360808301526101008360a0840137979650505050505050565b6000825160005b81811015610a6f5760208186018101518583015201610a55565b50600092019182525091905056fea2646970667358221220a65133aa751a404334778e3524f0fc9e356fc3b72bf09bbf655a859b7b37ff8f64736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600436106100c65760003560e01c8063a6f9dae11161007f578063c07401f011610059578063c07401f01461028b578063d224237314610293578063f7c8d221146102b3578063f851a440146102d357600080fd5b8063a6f9dae114610238578063abd70aa214610258578063b211b9cf1461026b57600080fd5b806326224c641461011c578063477348921461016a5780634b569450146101ae5780637e567b96146101d0578063893d20e8146101e65780638da5cb5b1461021857600080fd5b366101175734600260008282546100dd9190610911565b90915550506040513481527f1a07f76ee25d689f09f51951e5b4594bb2e440b7935111a41ba06afeb50ff0149060200160405180910390a1005b600080fd5b34801561012857600080fd5b50610150610137366004610942565b6001602081905260009182526040909120805491015482565b604080519283526020830191909152015b60405180910390f35b34801561017657600080fd5b506101a0610185366004610942565b6001600160a01b031660009081526001602052604090205490565b604051908152602001610161565b3480156101ba57600080fd5b506101ce6101c9366004610966565b6102f3565b005b3480156101dc57600080fd5b506101a060025481565b3480156101f257600080fd5b506000546001600160a01b03165b6040516001600160a01b039091168152602001610161565b34801561022457600080fd5b50600054610200906001600160a01b031681565b34801561024457600080fd5b506101ce610253366004610942565b610436565b34801561026457600080fd5b50476101a0565b34801561027757600080fd5b506101ce610286366004610966565b6104b2565b6101ce61061c565b34801561029f57600080fd5b506101ce6102ae366004610992565b610668565b3480156102bf57600080fd5b506101ce6102ce366004610966565b6107fd565b3480156102df57600080fd5b50600354610200906001600160a01b031681565b6000546001600160a01b031633146103525760405162461bcd60e51b815260206004820152601d60248201527f4f6e6c792061646d696e2063616e2073656e64207468652066756e647300000060448201526064015b60405180910390fd5b6001600160a01b0382166000908152600160205260409020548111156103ba5760405162461bcd60e51b815260206004820152601e60248201527f496e73756666696369656e7420726563657069656e742062616c616e636500006044820152606401610349565b6001600160a01b038216600090815260016020526040812080548392906103e29084906109ea565b90915550506001600160a01b0382166000818152600160208190526040808320429201919091555183156108fc0291849190818181858888f19350505050158015610431573d6000803e3d6000fd5b505050565b6000546001600160a01b031633146104905760405162461bcd60e51b815260206004820152601f60248201527f4f6e6c792061646d696e2063616e206368616e676520746865206f776e6572006044820152606401610349565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b03163314806104d557506003546001600160a01b031633145b6105215760405162461bcd60e51b815260206004820152601d60248201527f4f6e6c792061646d696e2063616e20616c6c6f636174652066756e64730000006044820152606401610349565b80306001600160a01b031663abd70aa26040518163ffffffff1660e01b8152600401602060405180830381865afa158015610560573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061058491906109fd565b10156105d25760405162461bcd60e51b815260206004820152601960248201527f496e73756666696369656e7420706f6f6c2062616c616e6365000000000000006044820152606401610349565b6001600160a01b038216600090815260016020526040812080548392906105fa908490610911565b92505081905550806002600082825461061391906109ea565b90915550505050565b346002600082825461062e9190610911565b90915550506040513481527f1a07f76ee25d689f09f51951e5b4594bb2e440b7935111a41ba06afeb50ff0149060200160405180910390a1565b60008381526004602052604090205460ff161561069b57604051633c7fd51360e11b815260048101849052602401610349565b7f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316633bc778e3857f000000000000000000000000000000000000000000000000000000000000000061072c89604051602001610718919060609190911b6bffffffffffffffffffffffff1916815260140190565b6040516020818303038152906040526108c6565b877f0000000000000000000000000000000000000000000000000000000000000000886040518763ffffffff1660e01b815260040161077096959493929190610a16565b60006040518083038186803b15801561078857600080fd5b505afa15801561079c573d6000803e3d6000fd5b5050506000848152600460205260409020805460ff19166001179055506107c385826107fd565b6040518381527ff786e7f77ede00a02a5464f8f0555798f42ba99a4a920ef2778db8d75e4656f79060200160405180910390a15050505050565b336001600160a01b038316146108675760405162461bcd60e51b815260206004820152602960248201527f4f6e6c792074686520726563697069656e742063616e207769746864726177206044820152687468652066756e647360b81b6064820152608401610349565b6001600160a01b0382166000908152600160205260409020548111156103ba5760405162461bcd60e51b8152602060048201526014602482015273496e73756666696369656e742062616c616e636560601b6044820152606401610349565b60006008826040516020016108db9190610a4e565b60408051601f198184030181529190528051602090910120901c92915050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610924576109246108fb565b92915050565b6001600160a01b038116811461093f57600080fd5b50565b60006020828403121561095457600080fd5b813561095f8161092a565b9392505050565b6000806040838503121561097957600080fd5b82356109848161092a565b946020939093013593505050565b600080600080600061018086880312156109ab57600080fd5b85356109b68161092a565b945060208601359350604086013592506101608601878111156109d857600080fd5b94979396509194606001933592915050565b81810381811115610924576109246108fb565b600060208284031215610a0f57600080fd5b5051919050565b60006101a0820190508782528660208301528560408301528460608301528360808301526101008360a0840137979650505050505050565b6000825160005b81811015610a6f5760208186018101518583015201610a55565b50600092019182525091905056fea2646970667358221220a65133aa751a404334778e3524f0fc9e356fc3b72bf09bbf655a859b7b37ff8f64736f6c63430008110033",
+  "devdoc": {
+    "events": {
+      "Verified(uint256)": {
+        "details": "A placeholder event that is emitted when a user successfully verifies with World ID",
+        "params": {
+          "nullifierHash": "The nullifier hash for the verified proof"
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_actionId": "The World ID action ID",
+          "_appId": "The World ID app ID",
+          "_worldId": "The WorldID router that will verify the proofs"
+        }
+      },
+      "execute(address,uint256,uint256,uint256[8],uint256)": {
+        "details": "Feel free to rename this method however you want! We've used `claim`, `verify` or `execute` in the past.",
+        "params": {
+          "nullifierHash": "The nullifier hash for this proof, preventing double signaling (returned by the JS widget).",
+          "proof": "The zero-knowledge proof that demonstrates the claimer is registered with World ID (returned by the JS widget).",
+          "root": "The root of the Merkle tree (returned by the JS widget).",
+          "signal": "An arbitrary input from the user, usually the user's wallet address (check README for further details)"
+        }
+      }
+    },
+    "stateVariables": {
+      "externalNullifier": {
+        "details": "The contract's external nullifier hash"
+      },
+      "groupId": {
+        "details": "The World ID group ID (always 1)"
+      },
+      "nullifierHashes": {
+        "details": "Whether a nullifier hash has been used already. Used to guarantee an action is only performed once by a single person"
+      },
+      "worldId": {
+        "details": "The World ID instance that will be used for verifying proofs"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "errors": {
+      "DuplicateNullifier(uint256)": [
+        {
+          "notice": "Thrown when attempting to reuse a nullifier"
+        }
+      ]
+    },
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 52,
+        "contract": "contracts/Contract.sol:Contract",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 57,
+        "contract": "contracts/Contract.sol:Contract",
+        "label": "userBalances",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_struct(User)6_storage)"
+      },
+      {
+        "astId": 59,
+        "contract": "contracts/Contract.sol:Contract",
+        "label": "poolAvailableBalance",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 61,
+        "contract": "contracts/Contract.sol:Contract",
+        "label": "admin",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      },
+      {
+        "astId": 82,
+        "contract": "contracts/Contract.sol:Contract",
+        "label": "nullifierHashes",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_uint256,t_bool)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_struct(User)6_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct User)",
+        "numberOfBytes": "32",
+        "value": "t_struct(User)6_storage"
+      },
+      "t_mapping(t_uint256,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_struct(User)6_storage": {
+        "encoding": "inplace",
+        "label": "struct User",
+        "members": [
+          {
+            "astId": 3,
+            "contract": "contracts/Contract.sol:Contract",
+            "label": "balance",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 5,
+            "contract": "contracts/Contract.sol:Contract",
+            "label": "lastWithdraw",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

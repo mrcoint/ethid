@@ -18,12 +18,14 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     with a random private key in the .env file (then used on hardhat.config.ts)
     You can run the `yarn account` command to check your balance in every network.
   */
+
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
-  const _worldId = `0x469449f251692e0779667583026b5a1e99512157`;
-  const _appId = `app_staging_1111f533fbb23185808467efc75c7bf7`;
-  const _actionId = `anon-vote`;
+  const _worldId = "0x469449f251692e0779667583026b5a1e99512157";
+  const _appId = "app_staging_1111f533fbb23185808467efc75c7bf7";
+  const _actionId = "claim-token";
 
+  console.log("Deploying contract with deployer address:", deployer);
   await deploy("Contract", {
     from: deployer,
     // Contract constructor arguments
