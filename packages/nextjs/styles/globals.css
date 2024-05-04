@@ -37,3 +37,7 @@ p {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
+.rsc-input{
+  background-color: white;
+}

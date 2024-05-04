@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot, { Loading } from 'react-simple-chatbot';
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+  background: '#f5f8fb',
+  fontFamily: 'Helvetica Neue',
+  headerBgColor: '#EF6C00',
+  headerFontColor: '#fff',
+  headerFontSize: '15px',
+  botBubbleColor: '#EF6C00',
+  botFontColor: '#fff',
+  userBubbleColor: '#fff',
+  userFontColor: '#4a4a4a',
+};
 
 
 function AIClient() {
@@ -43,16 +56,9 @@ class DBPedia extends Component {
   componentWillMount() {
     const self = this;
     const { steps } = this.props;
-    const search = steps.search.value;
+    const search = steps.search?.value;
     //const endpoint = encodeURI('http://localhost:5000');
-    const query = encodeURI(`${search}`);
-
-    const queryUrl = `http://localhost:5000/ask?q=${query}`;
-
-    const xhr = new XMLHttpRequest();
-
-    xhr.addEventListener('readystatechange', readyStateChange);
-
+    
     function readyStateChange() {
       if (this.readyState === 4) {
         const data = this.responseText;
@@ -75,9 +81,21 @@ class DBPedia extends Component {
       }
     }
 
-    xhr.open('GET', queryUrl);
-    console.log("query URL " + queryUrl);
-    xhr.send();
+    if(search){
+      const query = encodeURI(`${search}`);
+
+      const queryUrl = `http://localhost:5000/ask?q=${query}`;
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.addEventListener('readystatechange', readyStateChange);
+      
+      xhr.open('GET', queryUrl);
+      console.log("query URL " + queryUrl);
+      xhr.send();
+    }
+
+    
   }
 
   triggetNext() {
@@ -126,26 +144,28 @@ DBPedia.defaultProps = {
 };
 
 const Chat = () => (
-  <ChatBot
-    steps={[
-      {
-        id: '1',
-        message: 'Type something to search on Wikipédia. (Ex.: Brazil)',
-        trigger: 'search',
-      },
-      {
-        id: 'search',
-        user: true,
-        trigger: '3',
-      },
-      {
-        id: '3',
-        component: <DBPedia />,
-        waitAction: true,
-        trigger: '1',
-      },
-    ]}
-  />
+  <ThemeProvider theme={theme}>
+    <ChatBot
+      steps={[
+        {
+          id: '1',
+          message: 'Type something to search on our AI. (ie.: What do you do?)',
+          trigger: 'search',
+        },
+        {
+          id: 'search',
+          user: true,
+          trigger: '3',
+        },
+        {
+          id: '3',
+          component: <DBPedia />,
+          waitAction: true,
+          trigger: 'search',
+        },
+      ]}
+    />
+  </ThemeProvider>
 );
 
 export default Chat;
