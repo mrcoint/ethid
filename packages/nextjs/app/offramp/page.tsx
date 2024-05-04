@@ -13,7 +13,7 @@ const OfframpExample: React.FC = () => {
   const handleHostedFlowClick = () => {
     const url = `https://offramp-sandbox.gatefi.com/?merchantId=${
       process.env.NEXT_PUBLIC_UNLIMIT_MERCHANTID || "fc2a8e28-b15e-4ea8-8167-16859e9ba73d"
-    }&wallet=${connectedAddress}&cryptoCurrency=ETH&fiatCurrency=BRL&cryptoAmount=${withdrawAmount}&externalId=${crypto
+    }&wallet=${"connectedAddress"}&cryptoCurrency=ETH&fiatCurrency=BRL&cryptoAmount=${withdrawAmount}&externalId=${crypto
       .randomBytes(32)
       .toString("hex")}`;
     window.open(url, "_blank");
