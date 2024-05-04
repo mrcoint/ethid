@@ -21,8 +21,8 @@ const ClaimPage = () => {
     if (getUserBalance === undefined) {
       return;
     }
-    const parsedEthAmount = formatEther(getUserBalance!);
-    setEthAmount(parsedEthAmount.toString());
+    const parsedEthAmount = formatEther(getUserBalance);
+    setEthAmount(parsedEthAmount?.toString());
   }, [getUserBalance]);
 
   useEffect(() => {
