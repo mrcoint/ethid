@@ -6,7 +6,7 @@ import type { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <>
-      <div className="flex items-left flex-col flex-grow pt-10 mx-20">
+      <div className="flex items-left flex-col flex-grow pt-10 sm:px-5 md:px-10 lg:px-20 bg-[url('/background-kids.jpeg')] bg-cover">
         <div className="px-5">
           <h1 className="text-left my-5">
             <span className="block text-4xl font-bold">Every $1 Counts</span>
