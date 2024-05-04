@@ -18,7 +18,7 @@ app = Flask("EthID ChatBot")
 CORS(app) # This will enable CORS for all routes
 #CORS(app, resources={r"/ask": {"origins": "http://localhost:3000"}})
 nounce_vibe = "Nouns DAO has a vibe that's both innovative and community-oriented. It's like a bustling marketplace of creativity and collaboration, where people come together to tokenize and trade nouns. There's a sense of excitement and experimentation, with members actively participating in shaping the direction of the DAO and exploring the possibilities of decentralized ownership and governance. It's a space where imagination meets technology, fostering a culture of exploration and expression."
-nounce_vibe_prompt = nounce_vibe + " In this vibe, answer the following question in a short chat bot response: \n\n"
+nounce_vibe_prompt = nounce_vibe + " In this vibe, answer the following question in a short one sentence response no more than ten words or jargon, as a customer service representative: \n\n"
 
 
 @app.route("/")
