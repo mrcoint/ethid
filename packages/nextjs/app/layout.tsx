@@ -9,8 +9,8 @@ const baseUrl = process.env.VERCEL_URL
   : `http://localhost:${process.env.PORT || 3000}`;
 const imageUrl = `${baseUrl}/thumbnail.jpg`;
 
-const title = "Every $1 Counts";
-const titleTemplate = "Every $1 Counts";
+const title = "TrueReach";
+const titleTemplate = "TrueReach";
 const description = "Built with ◧-◧¬";
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description,
   },
   icons: {
-    icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+    icon: [{ url: "/yellow-orange-multi160px.png", sizes: "32x32", type: "image/png" }],
   },
 };
 
