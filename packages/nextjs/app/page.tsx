@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="p-10">
+        <div className="p-20">
           <Chat />
         </div>
       </div>

@@ -119,12 +119,7 @@ class DBPedia extends Component {
             }}
           >
             {
-              !trigger &&
-              <button
-                onClick={() => this.triggetNext()}
-              >
-                Search Again
-              </button>
+              !trigger && this.triggetNext()
             }
           </div>
         }
