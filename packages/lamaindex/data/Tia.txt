@@ -1,0 +1,52 @@
+We were inspired to create a public good that could help to address some of the major challenges faced by charities and the people they serve.
+
+We have developed a smart contract that checks for proof of personhood using the Worldcoin API and whether you’ve been approved to receive payments by a charitable organisation.
+
+Do we meet the requirements for the Unlimit prize (Best Public Goods)?
+
+Yes. We developed a permissionless public good and incorporated Nounsy fonts, some fun traits and our favourite custom generated nouns into our design.
+
+Do we meet the requirements for the World ID prizes (Best Usage, Most Creative, Best Public Goods, Pool)?
+
+Yes. Our use case for World ID focused on creating a public good that charitable organisations could use to super charge their permanent future funding capabilities. Proof validation for World ID has been fully integrated into our smart contract.
+
+Do we meet the requirements for the Unlimit prize?
+
+Yes. We developed an app that seamlessly integrates smart contracts and decentralised identity with Unlimit’s off-ramp capabilities to expand the potential for charities to raise future funding.
+
+How does the identity verification work?
+
+the platform utilizes Worldcoin ID for identity verification, which employs biometric tools (i.e. iris scanning) to create a unique and one-time identity check that securely links their biometric data with a unique blockchain identifier. This ensures each recipient’s identity is verified without storing personal details. 
+
+How are donation pools managed and allocated?
+
+Donation pools are managed and allocated by the admin who can be representatives from charities or DAOs who oversee the distribution of funds. They set up and define pools based on specific criteria such as type of need and priorities. Specific rules for how funds are to be allocated are programmed into smart contracts on blockchain to ensure transparency and adherence to defined criteria. This system allows for efficient and targeted use of funds, ensuring that they are used as intended by donor. 
+
+How is the system ensuring that the payments are only going to the intended recipients?
+
+The platform ensures that payments reach only the intended recipients in several ways:
+
+1. **Identity Verification**: As mentioned, the use of Worldcoin’s IDkit ensures that each recipient's identity is securely verified. Only those who have passed this verification process can receive funds, thereby minimizing the risk of fraud.
+2. **Smart Contracts**: The platform utilizes smart contracts to automate and enforce the rules set for each donation pool. These contracts execute payments only when the conditions of the donation are met, such as the recipient belonging to a certain verified group or meeting specific eligibility criteria.
+3. **Payment Tracking and Auditing**: The blockchain technology underlying the platform allows for transparent tracking of all transactions. Every payment can be audited in real-time, providing a transparent ledger of where funds are going and ensuring they reach their intended destinations.
+
+Charities ability to operate and raise funds is complicated by 3 big problems:
+
+1. They have very few permanent funding sources.
+2. Up to 90% of a every dollar that’s donated never reaches those in need. It’s consumed in sales, marketing, distribution and operational costs. 
+3. Donations don’t reach their intended recipients.
+
+We’ve built a solution that allows charitable organisations to:
+
+- identify those in need
+- Pay donations directly to the people they serve, and
+- Convert these Ether donations to local fiat
+
+What do we need to do to complete the solution?
+
+- Roundup on-ramp payments
+- Zero knowledge qualification for payment recipients
+- Build a platform for:
+    - donors to make donations and choose the charities of their choice
+    - charitable organisations to join to access community donations
+- Extend the solution to a broad array of payments platforms
