@@ -21,8 +21,8 @@ const ClaimPage = () => {
     if (getUserBalance === undefined) {
       return;
     }
-    const parsedEthAmount = formatEther(getUserBalance!);
-    setEthAmount(parsedEthAmount.toString());
+    const parsedEthAmount = formatEther(getUserBalance);
+    setEthAmount(parsedEthAmount?.toString());
   }, [getUserBalance]);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const ClaimPage = () => {
     <div className="container mx-auto my-10">
       <div className="flex justify-center">
         <div className="space-y-2">
-          <p className="font-semibold text-lg">Claim your tokens here</p>
+          <p className="font-semibold text-2xl">Claim your tokens here</p>
           <p>Your current balance is {ethAmount} ETH</p>
           <EtherInput value={ethAmount} usdMode={false} onChange={value => setEthAmount(value)} />
 

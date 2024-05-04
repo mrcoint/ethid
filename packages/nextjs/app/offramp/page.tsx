@@ -35,7 +35,7 @@ const OfframpExample: React.FC = () => {
       {isConnected && (
         <>
           <h1 className="text-center">
-            <span className="block text-2xl mb-2">Convert Your Crypto to Fiat</span>
+            <span className="block font-semibold text-2xl mt-12 mb-2">Convert Your Crypto to Fiat</span>
           </h1>
           {/* Display Wallet Balance here */}
           <div
@@ -65,6 +65,8 @@ const OfframpExample: React.FC = () => {
                 borderRadius: "5px",
                 border: "1px solid #ccc",
                 width: "310px",
+                color: "rgb(156 163 175",
+                backgroundColor: "#fff",
               }}
               onChange={e => setWithdrawAmount(Number(e.target.value))}
             />
@@ -79,22 +81,11 @@ const OfframpExample: React.FC = () => {
           >
             <button
               onClick={handleHostedFlowClick}
-              style={{
-                background: "rgb(201, 247, 58)",
-                border: "none",
-                borderRadius: "5px",
-                padding: "10px 20px",
-                fontSize: "1rem",
-                cursor: "pointer",
-                transition: "0.3s",
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                fontWeight: "bold",
-                color: "black",
-              }}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               onMouseOver={e => (e.currentTarget.style.opacity = "0.7")}
               onMouseOut={e => (e.currentTarget.style.opacity = "1")}
             >
-              Withdraw Funds
+              Get Paid
             </button>
           </div>
         </>
