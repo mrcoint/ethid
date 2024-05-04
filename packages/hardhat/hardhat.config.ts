@@ -9,6 +9,7 @@ import "solidity-coverage";
 import "@nomicfoundation/hardhat-verify";
 import "hardhat-deploy";
 import "hardhat-deploy-ethers";
+import "hardhat-gas-reporter";
 
 // If not set, it uses ours Alchemy's default API key.
 // You can get your own at https://dashboard.alchemyapi.io
@@ -131,6 +132,13 @@ const config: HardhatUserConfig = {
   },
   sourcify: {
     enabled: false,
+  },
+  gasReporter: {
+    L2: "optimism",
+    currency: "USD",
+    enabled: process.env.REPORT_GAS === "true",
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY,
+    L1Etherscan: process.env.ETHERSCAN_API_KEY,
   },
 };
 
