@@ -1,2 +1,3 @@
 llama-index
 flask
+flask_cors
